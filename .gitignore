@@ -43,6 +43,8 @@ applet/
 *.ii
 *.swp
 tags
+.clang_complete
+.gcc-flags.json
 
 #
 # C++
