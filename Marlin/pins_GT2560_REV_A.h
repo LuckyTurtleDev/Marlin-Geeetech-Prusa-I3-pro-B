@@ -51,18 +51,22 @@
 #define X_STEP_PIN         25
 #define X_DIR_PIN          23
 #define X_ENABLE_PIN       27
+#define X_CS_PIN           21
 
 #define Y_STEP_PIN         31
 #define Y_DIR_PIN          33
 #define Y_ENABLE_PIN       29
+#define Y_CS_PIN           40
 
 #define Z_STEP_PIN         37
 #define Z_DIR_PIN          39
 #define Z_ENABLE_PIN       35
+#define Z_CS_PIN           38
 
 #define E0_STEP_PIN        43
 #define E0_DIR_PIN         45
 #define E0_ENABLE_PIN      41
+#define E0_CS_PIN          53
 
 #define E1_STEP_PIN        49
 #define E1_DIR_PIN         47
