@@ -82,6 +82,13 @@
 #endif
 
 //
+// status LED
+//
+#define STAT_LED_RED_PIN                    PE4  // is blue
+#define STAT_LED_GREEN_PIN                  PE0
+#define STAT_LED_BLUE_PIN                   PE2  // is red
+
+//
 // Steppers
 //
 #define X_STEP_PIN                          PE9
