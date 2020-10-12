@@ -39,7 +39,7 @@ void handle_status_leds() {
     float max_temp = TERN0(HAS_HEATED_BED, _MAX(thermalManager.degTargetBed(), thermalManager.degBed()));
     HOTEND_LOOP()
       max_temp = _MAX(max_temp, thermalManager.degHotend(e), thermalManager.degTargetHotend(e));
-    const int8_t new_red = (max_temp > 55.0) ? HIGH : (max_temp < 54.0 || old_red < 0) ? LOW : old_red;
+    const int8_t new_red = (max_temp > 46) ? HIGH : (max_temp < 45 || old_red < 0) ? LOW : old_red;
     if (new_red != old_red) {
       old_red = new_red;
       #if PIN_EXISTS(STAT_LED_RED)
