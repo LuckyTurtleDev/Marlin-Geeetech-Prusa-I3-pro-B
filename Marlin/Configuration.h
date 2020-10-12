@@ -103,7 +103,7 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT 0
+#define SERIAL_PORT -1
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
@@ -120,7 +120,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 250000
+#define BAUDRATE 115200
 
 // Enable the Bluetooth serial interface on AT90USB devices
 //#define BLUETOOTH
@@ -538,9 +538,9 @@
   //#define MIN_BED_POWER 0
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
-  define DEFAULT_bedKp 361.91
-  define DEFAULT_bedKi 49.64
-  define DEFAULT_bedKd 659.67
+  #define DEFAULT_bedKp 361.91
+  #define DEFAULT_bedKi 49.64
+  #define DEFAULT_bedKd 659.67
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
@@ -745,7 +745,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.347, 80.347, 2560, 95 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.347 *X_MICROSTEPS/16, 80.347 *Y_MICROSTEPS/16, 2560.0 *Z_MICROSTEPS/16, 95.0 *E0_MICROSTEPS/16}
 
 /**
  * Default Max Feed Rate (mm/s)
