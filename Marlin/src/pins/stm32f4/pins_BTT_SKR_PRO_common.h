@@ -58,8 +58,8 @@
 
 #define X_MIN_PIN                           PC9   // EXTENSION-1
 #define Y_MIN_PIN                           PF9   // EXTENSION-1
-#define Z_MIN_PIN                           PG8   // EXTENSION-1
-#define Z_MAX_PIN                           PG5   // EXTENSION-1
+#define Z_MIN_PIN                           PC4   // EXTENSION-1
+#define Z_MAX_PIN                           PG11  // EXTENSION-1
 
 //
 // Z Probe must be this pin
