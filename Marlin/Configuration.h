@@ -629,7 +629,7 @@
 #define USE_ZMIN_PLUG
 //#define USE_XMAX_PLUG
 //#define USE_YMAX_PLUG
-//#define USE_ZMAX_PLUG
+#define USE_ZMAX_PLUG
 
 // Enable pullup for all endstops to prevent a floating state
 #define ENDSTOPPULLUPS
@@ -745,7 +745,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.347 *X_MICROSTEPS/16, 80.347 *Y_MICROSTEPS/16, 2560.0 *Z_MICROSTEPS/16, 95.0 *E0_MICROSTEPS/16}
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.347 *X_MICROSTEPS/16, 80.347 *Y_MICROSTEPS/16, 3200.0 *Z_MICROSTEPS/16, 95.0 *E0_MICROSTEPS/16}
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1097,7 +1097,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
+#define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -1126,16 +1126,16 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 185
-#define Y_BED_SIZE 190
+#define X_BED_SIZE 197
+#define Y_BED_SIZE 197
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS 200
-#define Y_MAX_POS 190
-#define Z_MAX_POS 180
+#define X_MAX_POS 202
+#define Y_MAX_POS 197
+#define Z_MAX_POS 166
 
 /**
  * Software Endstops
@@ -1389,10 +1389,10 @@
 // - Move the Z probe (or nozzle) to a defined XY point before Z Homing.
 // - Prevent Z homing when the Z probe is outside bed area.
 //
-//#define Z_SAFE_HOMING
+#define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing
+  #define Z_SAFE_HOMING_X_POINT 0         // X point for Z homing
   #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // Y point for Z homing
 #endif
 
