@@ -1108,7 +1108,7 @@
 
 // @section homing
 
-//#define NO_MOTION_BEFORE_HOMING // Inhibit movement until all axes have been homed
+#define NO_MOTION_BEFORE_HOMING // Inhibit movement until all axes have been homed
 
 //#define UNKNOWN_Z_NO_RAISE      // Don't raise Z (lower the bed) if Z is "unknown." For beds that fall when Z is powered off.
 
@@ -1437,9 +1437,9 @@
 
 #if ENABLED(SKEW_CORRECTION)
   // Input all length measurements here:
-  #define XY_DIAG_AC 142.39
-  #define XY_DIAG_BD 140.72
-  #define XY_SIDE_AD 100.04
+  #define XY_DIAG_AC 142.41
+  #define XY_DIAG_BD 140.63
+  #define XY_SIDE_AD 100.05
 
   // Or, set the default skew factors directly here
   // to override the above measurements:
